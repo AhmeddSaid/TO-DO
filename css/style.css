@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    min-height: calc(100vh - 77px);
+}
+
+.tasks .task:hover {
+    background-color: #f7f7f7;
+}
+
+.dark-theme {
+    background-color: #181818;
+    color: white;
+}
+.dark-theme .change-background h1 {
+    text-shadow: 0px 0px 10px white;
+}
+.light-theme {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.change-background {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid #eee;
+    padding: 20px 20px 10px 20px;
+    margin-bottom: 20px;
+    position: relative;
+    user-select: none;
+}
+.change-background h1 {
+    font-weight: bold;
+    font-family: "Lobster", cursive;
+    font-size: 50px;
+    margin-left: 50px;
+}
+.theme-change {
+    display: flex;
+}
+.change-background .dark-button,
+.change-background .light-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.change-background .dark-button {
+    background-color: #181818;
+    border: 1px solid white;
+    margin-right: 5px;
+}
+.change-background .light-button {
+    background-color: white;
+    border: 1px solid black;
+    margin-right: 30px;
+}
+@media (max-width: 991px) {
+    .change-background .dark-button,
+    .change-background .light-button {
+        width: 30px;
+        height: 30px;
+    }
+    .change-background h1 {
+        margin-left: 10px;
+    }
+}
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    margin-right: 10px;
+    width: 225px;
+    height: 34px;
+    font-size: 24px;
+    padding: 8px;
+    border: 2px solid #181818;
+    border-radius: 9px;
+    transition: 300ms;
+}
+.dark-theme .input {
+    border: 2px solid white;
+    background-color: #181818;
+    color: white;
+}
+.input:focus {
+    outline: none;
+    box-shadow: 0px 0px 9px white;
+}
+.add {
+    background-color: white;
+    border: 2px solid #181818;
+    border-radius: 9px;
+    padding: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Lobster", cursive;
+}
+@media (max-width: 991px) {
+    .form {
+        flex-direction: column;
+        align-items: center;
+    }
+    .input {
+        display: block;
+        width: calc(100% - 40px);
+        margin: 20px auto;
+        font-size: 24px;
+    }
+    .add {
+        display: block;
+        font-size: 24px;
+        padding: 5px;
+    }
+}
+
+.dark-theme .add {
+    background-color: #181818;
+    color: white;
+    border-color: white;
+    transition: 300ms;
+}
+.dark-theme .add:hover {
+    box-shadow: 0px 0px 9px white;
+}
+.tasks {
+    margin: 50px;
+    font-size: 40px;
+    font-family: "Shadows Into Light", cursive;
+    background-color: transparent;
+}
+
+.tasks .task {
+    padding: 10px;
+    border-radius: 9px;
+    display: flex;
+    border-bottom: 2px solid #181818;
+    justify-content: space-between;
+    word-break: break-all;
+}
+.dark-theme .task {
+    color: white;
+    border-bottom: 2px solid white;
+}
+.tasks .task:hover {
+    background-color: #eee;
+}
+.tasks .task .del {
+    color: red;
+    transition: 300ms;
+    margin-right: 10px;
+    display: block;
+}
+.tasks .task .del:hover {
+    text-shadow: 0px 0px 5px red;
+    cursor: pointer;
+}
+.dark-theme .tasks .task:hover {
+    background-color: transparent;
+    border: 2px solid white;
+}
+.task.done div {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+.dark-theme .task.done div {
+    text-decoration-color: red;
+}
+
+.footer {
+    background-color: #191919;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    text-align: center;
+    color: white;
+    border-top: 1px solid #444;
+}
+.footer .copyright span {
+    color: white;
+    font-size: 22px;
+}
