@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .container {
-    min-height: calc(100vh - 77px);
+    min-height: 100vh;
 }
 
 .tasks .task:hover {
@@ -176,15 +176,26 @@
     background-color: #191919;
     width: 100%;
     bottom: 0;
+    position: fixed;
 }
 
 .footer .copyright {
-    padding: 25px 0;
+    padding: 14px 0;
     text-align: center;
     color: white;
-    border-top: 1px solid #444;
+    border-top: 1px solid #181818;
 }
+
 .footer .copyright span {
     color: white;
     font-size: 22px;
+}
+@media (max-width: 991px) {
+    .footer .copyright {
+        font-size: 12px;
+        padding: 20px 0;
+    }
+    .footer .copyright span {
+        font-size: 12px;
+    }
 }
